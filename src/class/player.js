@@ -1,4 +1,4 @@
-import { Quest } from "../class/quest.js";
+import { Quest } from "./quest.js";
 
 export class Player {
 
@@ -32,17 +32,15 @@ export class Player {
         this.scene.cameras.main.startFollow(this.player);
 
         // Agregamos la lógica de colisión con los portales
-        this.scene.physics.add.overlap(this.player, this.scene.portal1.portal, this.tocarPortal1, null, this);
-        this.scene.physics.add.overlap(this.player, this.scene.portal2.portal, this.tocarPortal2, null, this);
-        this.scene.physics.add.overlap(this.player, this.scene.portal3.portal, this.tocarPortal3, null, this);
-        this.scene.physics.add.overlap(this.player, this.scene.portal4.portal, this.tocarPortal4, null, this);
-        this.scene.physics.add.overlap(this.player, this.scene.portal5.portal, this.tocarPortal5, null, this);
+        this.scene.physics.add.overlap(this.player, this.scene.portals[0].portal, (player, portal) => {
+            this.tocarPortal1(player, portal)
+        } , null, this);
     }
 
     update() {
         this.player.setVelocityX(this.speed);
         this.player.setVelocityY(-this.upSpeed);
-        if(this.speed <= 500) {
+        if(this.speed <= 100) {
             this.speed += 0.1;
             this.upSpeed += 0.2;
         }
