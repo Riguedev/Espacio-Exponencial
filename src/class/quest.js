@@ -7,10 +7,6 @@ export class Quest {
         this.textElements = []; // Arreglo para almacenar los textos creados
     }
 
-    preload() {
-        // Cargar recursos si es necesario
-    }
-
     create() {
         // Crear y agregar el texto de la pregunta
         let questionText = this.scene.add.text(this.positionX, this.positionY, this.question.title, {

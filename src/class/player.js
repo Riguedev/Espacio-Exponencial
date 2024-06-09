@@ -31,7 +31,6 @@ export class Player {
         this.cursors = this.scene.input.keyboard.createCursorKeys();
         this.scene.cameras.main.startFollow(this.player);
 
-        // Agregamos la lógica de colisión con los portales
         this.scene.physics.add.overlap(this.player, this.scene.portals[0].portal, (player, portal) => {
             this.tocarPortal1(player, portal)
         } , null, this);
