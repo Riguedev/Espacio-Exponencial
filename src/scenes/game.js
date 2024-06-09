@@ -1,6 +1,7 @@
 import { Player } from "../class/player.js";
 import { spaceShip } from "../components/spaceShip.js";
 import { ExercisePortal } from "../class/exercisePortal.js";
+import { questionList } from "../components/questList.js";
 
 export class Game extends Phaser.Scene {
     constructor() {
@@ -12,7 +13,8 @@ export class Game extends Phaser.Scene {
             new ExercisePortal (this, 1260, 1600),
             new ExercisePortal (this, 1750, 700),
             new ExercisePortal (this, 2100, 100)
-        ]
+        ],
+        this.questionList = questionList;
     }
 
     preload() {
