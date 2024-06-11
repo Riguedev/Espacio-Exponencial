@@ -7,12 +7,16 @@ export class Gameover extends Phaser.Scene {
     }
 
     preload() {
-        this.load.image("over", "assets/images/game_over.png");
         this.restarButton.preload();
     }
 
+    init(data) {
+        this.score = data.points;
+    }
+
     create() {
-        this.add.image(640, 360, "over")
         this.restarButton.create();
+        this.add.text(100, 100, 'Tu Puntuación', { fontSize: '32px', fill: '#fff' });
+        this.add.text(100, 200, this.score, { fontSize: '32px', fill: '#fff' });
     }
 }

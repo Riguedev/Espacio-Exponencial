@@ -27,7 +27,8 @@ export class Player {
         this.player = this.scene.physics.add.sprite(0, 4000, "idle");
         this.player.setCollideWorldBounds(true);
         this.player.setBounce(0.2);
-        this.player.rotation = Phaser.Math.DegToRad(45);
+        this.player.body.setSize(25, 25);
+        this.player.rotation = Phaser.Math.DegToRad(20);
 
         this.cursors = this.scene.input.keyboard.createCursorKeys();
         this.scene.cameras.main.startFollow(this.player);
@@ -35,6 +36,7 @@ export class Player {
         for (let i = 0; i < this.scene.portals.length - 1; i++) {
             this.scene.physics.add.overlap(this.player, this.scene.portals[i].portal, this.tocarPortal.bind(this, i), null, this);
         }
+        this.scene.physics.add.overlap(this.player, this.scene.portals[4].portal, this.endGame, null, this)
     }
 
     update() {
@@ -54,5 +56,12 @@ export class Player {
         q.create();
         this.validations[index] = true;
         portal.destroy();
+    }
+
+
+    endGame(player, portal) {
+        let relatedScene = this.scene
+        this.scene.physics.pause();
+        relatedScene.scene.start('Gameover', { points: this.scene.score})
     }
 }

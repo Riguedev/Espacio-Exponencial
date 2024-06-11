@@ -46,7 +46,7 @@ export const questionList = [
             result: "Yuta"
         },
 
-        positionX: 1000,
+        positionX: 900,
         positionY: 1600
     },
 
@@ -63,7 +63,7 @@ export const questionList = [
             result: "Yuta"
         },
 
-        positionX: 1600,
+        positionX: 1300,
         positionY: 700
     }
 ]
