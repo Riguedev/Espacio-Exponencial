@@ -65,5 +65,22 @@ export const questionList = [
 
         positionX: 2400,
         positionY: 1500
+    },
+
+    {
+        questionInfo: {
+            title: "Quien posee la tecnica de mimetismo",
+            options: [
+                { res: "Yuta", distance: 700 },
+                { res: "Gojo", distance: 750 },
+                { res: "Maki", distance: 800 },
+                { res: "Miwa", distance: 850 },
+                { res: "Geto", distance: 900 }
+            ],
+            result: "Yuta"
+        },
+
+        positionX: 3100,
+        positionY: 600
     }
 ]

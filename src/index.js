@@ -5,7 +5,7 @@ import { Gameover } from "./scenes/gameover.js";
 const config = {
     type: Phaser.AUTO,
     width: 1280,
-    height: 720,
+    height: 600,
     scene: [Game, Gameover, Congratulation],
     physics: {
         default: 'arcade',

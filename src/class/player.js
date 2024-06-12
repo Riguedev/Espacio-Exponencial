@@ -33,10 +33,9 @@ export class Player {
         this.cursors = this.scene.input.keyboard.createCursorKeys();
         this.scene.cameras.main.startFollow(this.player);
 
-        for (let i = 0; i < this.scene.portals.length - 1; i++) {
+        for (let i = 0; i < this.scene.portals.length; i++) {
             this.scene.physics.add.overlap(this.player, this.scene.portals[i].portal, this.tocarPortal.bind(this, i), null, this);
         }
-        this.scene.physics.add.overlap(this.player, this.scene.portals[4].portal, this.endGame, null, this)
     }
 
     update() {
@@ -52,15 +51,9 @@ export class Player {
         if (this.validations[index]) return;
 
         this.scene.physics.pause();
-        let q = new Quest(this.scene, this.list[index].questionInfo, this.list[index].positionX, this.list[index].positionY);
+        let q = new Quest(this.scene, this.list[index].questionInfo, this.list[index].positionX, this.list[index].positionY, index);
         q.create();
         this.validations[index] = true;
         portal.destroy();
-    }
-
-
-    endGame(player, portal) {
-        let relatedScene = this.scene
-        relatedScene.scene.start('Gameover', { points: this.scene})
     }
 }

@@ -1,9 +1,10 @@
 export class Quest {
-    constructor(scene, question, positionX, positionY) {
+    constructor(scene, question, positionX, positionY, index) {
         this.question = question;
         this.scene = scene;
         this.positionX = positionX;
         this.positionY = positionY;
+        this.index = index;
         this.textElements = []; // Arreglo para almacenar los textos creados
     }
 
@@ -38,9 +39,17 @@ export class Quest {
         if (res === this.question.result) {
             this.scene.counter += 1;
             this.scene.score += 1000
+            if(this.index === 4) {
+                let relatedScene = this.scene
+                relatedScene.scene.start('Gameover', { points: this.scene})
+            }
 
         } else {
             alert(this.scene.score)
+            if(this.index === 4) {
+                let relatedScene = this.scene
+                relatedScene.scene.start('Gameover', { points: this.scene})
+            }
         }
 
         // Destruir todos los textos después de hacer clic en una opción
