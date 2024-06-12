@@ -24,7 +24,7 @@ export class Player {
     }
 
     create() {
-        this.player = this.scene.physics.add.sprite(0, 4000, "idle");
+        this.player = this.scene.physics.add.sprite(800, 5700, "idle");
         this.player.setCollideWorldBounds(true);
         this.player.setBounce(0.2);
         this.player.body.setSize(25, 25);

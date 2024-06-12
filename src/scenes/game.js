@@ -8,11 +8,11 @@ export class Game extends Phaser.Scene {
         super({ key: "Game" });
         this.score = 0;
         this.portals = [
-            new ExercisePortal (this, 500, 3200),
-            new ExercisePortal (this, 850, 2400),
-            new ExercisePortal (this, 1260, 1600),
-            new ExercisePortal (this, 1750, 700),
-            new ExercisePortal (this, 2100, 100)
+            new ExercisePortal (this, 1350, 4700, -65),
+            new ExercisePortal (this, 1850, 3700, -66),
+            new ExercisePortal (this, 2350, 2700, -68),
+            new ExercisePortal (this, 2900, 1700, -70),
+            new ExercisePortal (this, 3400, 700, -60)
         ],
         this.questionList = questionList;
     }

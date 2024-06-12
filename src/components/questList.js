@@ -3,67 +3,67 @@ export const questionList = [
         questionInfo: {
             title: "Quien posee la tecnica de mimetismo",
             options: [
-                { res: "Yuta", distance: 3300 },
-                { res: "Gojo", distance: 3350 },
-                { res: "Maki", distance: 3400 },
-                { res: "Miwa", distance: 3450 },
-                { res: "Geto", distance: 3500 }
-            ],
-            result: "Yuta"
-        },
-
-        positionX: 100,
-        positionY: 3200
-    },
-
-    {
-        questionInfo: {
-            title: "Quien posee la tecnica de mimetismo",
-            options: [
-                { res: "Yuta", distance: 2500 },
-                { res: "Gojo", distance: 2550 },
-                { res: "Maki", distance: 2600 },
-                { res: "Miwa", distance: 2650 },
-                { res: "Geto", distance: 2700 }
-            ],
-            result: "Yuta"
-        },
-
-        positionX: 500,
-        positionY: 2400
-    },
-
-    {
-        questionInfo: {
-            title: "Quien posee la tecnica de mimetismo",
-            options: [
-                { res: "Yuta", distance: 1700 },
-                { res: "Gojo", distance: 1750 },
-                { res: "Maki", distance: 1800 },
-                { res: "Miwa", distance: 1850 },
-                { res: "Geto", distance: 1900 }
+                { res: "Yuta", distance: 4700 },
+                { res: "Gojo", distance: 4750 },
+                { res: "Maki", distance: 4800 },
+                { res: "Miwa", distance: 4850 },
+                { res: "Geto", distance: 4900 }
             ],
             result: "Yuta"
         },
 
         positionX: 900,
-        positionY: 1600
+        positionY: 4600
     },
 
     {
         questionInfo: {
             title: "Quien posee la tecnica de mimetismo",
             options: [
-                { res: "Yuta", distance: 800 },
-                { res: "Gojo", distance: 850 },
-                { res: "Maki", distance: 900 },
-                { res: "Miwa", distance: 950 },
-                { res: "Geto", distance: 1000 }
+                { res: "Yuta", distance: 3700 },
+                { res: "Gojo", distance: 3750 },
+                { res: "Maki", distance: 3800 },
+                { res: "Miwa", distance: 3850 },
+                { res: "Geto", distance: 3900 }
             ],
             result: "Yuta"
         },
 
-        positionX: 1300,
-        positionY: 700
+        positionX: 1400,
+        positionY: 3600
+    },
+
+    {
+        questionInfo: {
+            title: "Quien posee la tecnica de mimetismo",
+            options: [
+                { res: "Yuta", distance: 2700 },
+                { res: "Gojo", distance: 2750 },
+                { res: "Maki", distance: 2800 },
+                { res: "Miwa", distance: 2850 },
+                { res: "Geto", distance: 2900 }
+            ],
+            result: "Yuta"
+        },
+
+        positionX: 1900,
+        positionY: 2600
+    },
+
+    {
+        questionInfo: {
+            title: "Quien posee la tecnica de mimetismo",
+            options: [
+                { res: "Yuta", distance: 1600 },
+                { res: "Gojo", distance: 1650 },
+                { res: "Maki", distance: 1700 },
+                { res: "Miwa", distance: 1750 },
+                { res: "Geto", distance: 1800 }
+            ],
+            result: "Yuta"
+        },
+
+        positionX: 2400,
+        positionY: 1500
     }
 ]

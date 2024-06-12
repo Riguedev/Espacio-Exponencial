@@ -37,9 +37,7 @@ export class Quest {
     handleClick(res) {
         if (res === this.question.result) {
             this.scene.counter += 1;
-            alert("Funciono");
             this.scene.score += 1000
-            alert(this.scene.score)
 
         } else {
             alert(this.scene.score)
