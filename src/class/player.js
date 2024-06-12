@@ -61,7 +61,6 @@ export class Player {
 
     endGame(player, portal) {
         let relatedScene = this.scene
-        this.scene.physics.pause();
-        relatedScene.scene.start('Gameover', { points: this.scene.score})
+        relatedScene.scene.start('Gameover', { points: this.scene})
     }
 }
