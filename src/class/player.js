@@ -51,6 +51,7 @@ export class Player {
         if (this.validations[index]) return;
 
         this.scene.physics.pause();
+        this.scene.portalSound.play();
         let q = new Quest(this.scene, this.list[index].questionInfo, this.list[index].positionX, this.list[index].positionY, index);
         q.create();
         this.validations[index] = true;

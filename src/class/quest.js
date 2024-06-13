@@ -39,14 +39,17 @@ export class Quest {
         if (res === this.question.result) {
             this.scene.counter += 1;
             this.scene.score += 1000
+            this.scene.correctSound.play();
             if(this.index === 4) {
+                this.scene.soundTrack.stop();
                 let relatedScene = this.scene
                 relatedScene.scene.start('Gameover', { points: this.scene})
             }
 
         } else {
-            alert(this.scene.score)
+            this.scene.errorSound.play();
             if(this.index === 4) {
+                this.scene.soundTrack.stop();
                 let relatedScene = this.scene
                 relatedScene.scene.start('Gameover', { points: this.scene})
             }

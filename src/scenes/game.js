@@ -18,6 +18,10 @@ export class Game extends Phaser.Scene {
     }
 
     preload() {
+        this.load.audio("correct", "assets/audio/correct.mp3");
+        this.load.audio("error", "assets/audio/fail.mp3");
+        this.load.audio("portal", "assets/audio/portal.mp3");
+        this.load.audio("backsound", "assets/audio/backgroundMusic.mp3")
         this.load.image("background", "assets/images/background.jpg");
         this.player = new Player(this, spaceShip, 128, 128);
         this.player.preload()
@@ -25,6 +29,11 @@ export class Game extends Phaser.Scene {
     }
 
     create() {
+        this.soundTrack = this.sound.add("backsound");
+        this.correctSound = this.sound.add("correct");
+        this.errorSound = this.sound.add("error");
+        this.portalSound = this.sound.add("portal");
+        this.soundTrack.play({loop: true})
         const background = this.add.image(0, 0, "background").setOrigin(0, 0);
         this.physics.world.setBounds(0, 0, background.width, background.height);
         this.portals.forEach((element) => element.create())
