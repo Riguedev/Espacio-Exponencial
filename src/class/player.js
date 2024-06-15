@@ -10,6 +10,7 @@ export class Player {
         this.upSpeed = -5;
         this.downSpeed = 0;
         this.speed = 1;
+        this.angle = 90;
         this.validations = [false, false, false, false]
         this.questionShown = false; 
         this.pre = false
@@ -24,11 +25,11 @@ export class Player {
     }
 
     create() {
-        this.player = this.scene.physics.add.sprite(800, 5700, "idle");
+        this.player = this.scene.physics.add.sprite(500, 5700, "idle");
         this.player.setCollideWorldBounds(true);
         this.player.setBounce(0.2);
         this.player.body.setSize(25, 25);
-        this.player.rotation = Phaser.Math.DegToRad(20);
+        this.player.rotation = Phaser.Math.DegToRad(this.angle);
 
         this.cursors = this.scene.input.keyboard.createCursorKeys();
         this.scene.cameras.main.startFollow(this.player);
@@ -39,12 +40,22 @@ export class Player {
     }
 
     update() {
-        this.player.setVelocityX(this.speed);
-        this.player.setVelocityY(-this.upSpeed);
-        if (this.speed <= 100) {
-            this.speed += 0.1;
-            this.upSpeed += 0.2;
+        this.player.rotation = Phaser.Math.DegToRad(this.angle);
+        if(this.player.x >= 800) {
+            this.player.setVelocityX(this.speed);
+            this.player.setVelocityY(-this.upSpeed);
+            if (this.speed <= 100) {
+                this.speed += 0.1;
+                this.upSpeed += 0.2;
+                if(this.angle > 20) {
+                    this.angle -= 0.3;
+                }
+            } 
+        } else {
+            this.player.setVelocityX(30);
+            this.player.setVelocityY(0);
         }
+        console.log(this.player.x)
     }
 
     tocarPortal(index, player, portal) {

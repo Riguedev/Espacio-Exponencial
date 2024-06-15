@@ -23,6 +23,7 @@ export class Game extends Phaser.Scene {
         this.load.audio("portal", "assets/audio/portal.mp3");
         this.load.audio("backsound", "assets/audio/backgroundMusic.mp3")
         this.load.image("background", "assets/images/background.jpg");
+        this.load.image("base", "assets/sprites/Estrellade_la_muerte.webp")
         this.player = new Player(this, spaceShip, 128, 128);
         this.player.preload()
         this.portals.forEach((element) => element.preload())
@@ -38,6 +39,7 @@ export class Game extends Phaser.Scene {
         this.physics.world.setBounds(0, 0, background.width, background.height);
         this.portals.forEach((element) => element.create())
         this.player.create();
+        this.add.image(300, 5700, "base")
     }
 
     update() {
