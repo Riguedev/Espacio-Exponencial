@@ -5,7 +5,7 @@ export class EndButton {
     }
   
     preload() {
-        this.relatedScene.load.spritesheet('button', 'assets/images/button.png', { frameWidth: 360, frameHeight: 180 });
+        this.relatedScene.load.spritesheet('button', 'assets/images/reintentar.png', { frameWidth: 360, frameHeight: 180 });
     }
 
     create() {

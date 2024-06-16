@@ -4,7 +4,7 @@ export class RestartButton {
     }
   
     preload() {
-        this.relatedScene.load.spritesheet('button', 'assets/images/button.png', { frameWidth: 360, frameHeight: 180 });
+        this.relatedScene.load.spritesheet('button', 'assets/sprites/reintentar.png', { frameWidth: 360, frameHeight: 180 });
     }
 
     create() {
