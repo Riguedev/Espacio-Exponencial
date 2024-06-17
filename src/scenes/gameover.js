@@ -1,13 +1,13 @@
-import { RestartButton } from "../components/restart-button.js"
+import { buttons } from "../class/buttons.js";
 
 export class Gameover extends Phaser.Scene {
     constructor() {
         super({key: "Gameover"})
-        this.restarButton = new RestartButton(this);
+        this.reloadButton = new buttons(this, 'assets/sprites/reintentar.png', "Game", 400, 230)
     }
 
     preload() {
-        this.restarButton.preload();
+        this.reloadButton.preload();
     }
 
     init(data) {
@@ -15,7 +15,7 @@ export class Gameover extends Phaser.Scene {
     }
 
     create() {
-        this.restarButton.create();
+        this.reloadButton.create();
         this.add.text(100, 100, 'Tu Puntuación', { fontSize: '32px', fill: '#fff' });
         this.add.text(100, 200, this.gameData.score, { fontSize: '32px', fill: '#fff' });
         this.gameData.score = 0
