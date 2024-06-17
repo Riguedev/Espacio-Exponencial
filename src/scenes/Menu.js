@@ -14,5 +14,7 @@ export class Menu extends Phaser.Scene {
     create() {
         this.add.image(0, 0,"back").setOrigin(0,0);
         this.play.create();
+        this.add.text(350, 400, 'DEMO, Pagar para obtener la Oficial', { fontSize: '32px', fill: '#fff' });
+
     }
 }
