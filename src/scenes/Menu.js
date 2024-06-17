@@ -3,7 +3,7 @@ import { buttons } from "../class/buttons.js";
 export class Menu extends Phaser.Scene {
     constructor() {
         super({key: "Menu"});
-        this.play = new buttons(this, 'assets/sprites/play.png', "Game", 640, 300)
+        this.play = new buttons(this, 'assets/sprites/play.png', "Game", 640, 300, "play")
     }
 
     preload() {
