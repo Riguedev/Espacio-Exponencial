@@ -48,11 +48,11 @@ export class Player {
                 this.speed += 0.1;
                 this.upSpeed += 0.2;
                 if(this.angle > 20) {
-                    this.angle -= 0.3;
+                    this.angle -= 1;
                 }
             } 
         } else {
-            this.player.setVelocityX(30);
+            this.player.setVelocityX(50);
             this.player.setVelocityY(0);
         }
         console.log(this.player.x)
