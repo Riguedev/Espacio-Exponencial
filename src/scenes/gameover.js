@@ -1,10 +1,11 @@
 import { buttons } from "../class/buttons.js";
+import { homeButton } from "../class/homeButton.js";
 
 export class Gameover extends Phaser.Scene {
     constructor() {
         super({key: "Gameover"})
         this.reloadButton = new buttons(this, 'assets/sprites/reintentar.png', "Game", 400, 230, "reload")
-        this.homeButton = new buttons(this, 'assets/sprites/home.png', "Menu", 600, 230, "home");
+        this.homeButton = new homeButton(this, 'assets/sprites/home.png', "Menu", 600, 230, "home");
     }
 
     preload() {
