@@ -55,7 +55,6 @@ export class Player {
             this.player.setVelocityX(50);
             this.player.setVelocityY(0);
         }
-        console.log(this.player.x)
     }
 
     tocarPortal(index, player, portal) {

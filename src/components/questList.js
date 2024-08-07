@@ -2,19 +2,27 @@ import { infoList } from "./listInfo.js"
 
 let num1 = 0
 let num2 = 0
+let num3 = 0
+let num4 = 0
+let num5 = 0
+
 const newNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 let lista = [];
 
 const checkNumber = (num, list) => {
     if (list.includes(num)) {
-        return checkNumber(newNumber(0, 2), list);
+        return checkNumber(newNumber(0, infoList.length - 1), list);
     }
     list.push(num);
     return num;
 };
 
-num1 = checkNumber(newNumber(0,2), lista)
-num2 = checkNumber(newNumber(0,2), lista)
+num1 = checkNumber(newNumber(0,infoList.length - 1), lista)
+num2 = checkNumber(newNumber(0,infoList.length - 1), lista)
+num3 = checkNumber(newNumber(0,infoList.length - 1), lista)
+num4 = checkNumber(newNumber(0,infoList.length - 1), lista)
+num5 = checkNumber(newNumber(0,infoList.length - 1), lista)
+
 
 export const questionList = [
     {
@@ -51,14 +59,14 @@ export const questionList = [
 
     {
         questionInfo: {
-            title: "Formula general de una función exponencial",
+            title: infoList[num3].name,
             options: [
-                { res: "f(x) = (a)x", distance: 2700 },
-                { res: "f(a) = (2)3", distance: 2750 },
-                { res: "f = raiz de 2", distance: 2800 },
-                { res: "f = (0,1)(0,3)", distance: 2850 },
+                { res: infoList[num3].op1, distance: 2700 },
+                { res: infoList[num3].op2, distance: 2750 },
+                { res: infoList[num3].op3, distance: 2800 },
+                { res: infoList[num3].op4, distance: 2850 },
             ],
-            result: "f(x) = (a)x"
+            result: infoList[num3].correct
         },
 
         positionX: 1900,
@@ -67,14 +75,14 @@ export const questionList = [
 
     {
         questionInfo: {
-            title: "La función exponencial es decreciente cuando",
+            title: infoList[num4].name,
             options: [
-                { res: "0 > a > 1", distance: 1600 },
-                { res: "0 > a < 1", distance: 1650 },
-                { res: "0 < a < 1", distance: 1700 },
-                { res: "0 < a > 1", distance: 1750 },
+                { res: infoList[num4].op1, distance: 1600 },
+                { res: infoList[num4].op2, distance: 1650 },
+                { res: infoList[num4].op3, distance: 1700 },
+                { res: infoList[num4].op4, distance: 1750 },
             ],
-            result: "0 < a < 1"
+            result: infoList[num4].correct
         },
 
         positionX: 2400,
@@ -83,14 +91,14 @@ export const questionList = [
 
     {
         questionInfo: {
-            title: "Encuentra la solución a la siguiente ecuación: (1/9)x = 81",
+            title: infoList[num5].name,
             options: [
-                { res: "x = 9", distance: 700 },
-                { res: "x = -2", distance: 750 },
-                { res: "x = 2", distance: 800 },
-                { res: "x = -(2/3)", distance: 850 },
+                { res: infoList[num5].op1, distance: 700 },
+                { res: infoList[num5].op2, distance: 750 },
+                { res: infoList[num5].op3, distance: 800 },
+                { res: infoList[num5].op4, distance: 850 },
             ],
-            result: "x = -2"
+            result: infoList[num5].correct
         },
 
         positionX: 3100,
