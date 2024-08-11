@@ -7,6 +7,7 @@ import { questionList } from "../components/questList.js";
 export class Game extends Phaser.Scene {
     constructor() {
         super({ key: "Game" });
+        this.playerMove = false;
         this.score = 0;
         this.portals = [
             new ExercisePortal (this, 1350, 4700, -65),

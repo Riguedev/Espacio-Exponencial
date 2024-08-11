@@ -43,7 +43,7 @@ export class Quest {
             if(this.index === 4) {
                 this.scene.soundTrack.stop();
                 let relatedScene = this.scene
-                relatedScene.scene.start('Gameover', { points: this.scene})
+                relatedScene.scene.start('Film', { points: this.scene})
             }
 
         } else {
@@ -51,7 +51,7 @@ export class Quest {
             if(this.index === 4) {
                 this.scene.soundTrack.stop();
                 let relatedScene = this.scene
-                relatedScene.scene.start('Gameover', { points: this.scene})
+                relatedScene.scene.start('Film', { points: this.scene})
             }
         }
 
