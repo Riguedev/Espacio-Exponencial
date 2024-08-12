@@ -9,7 +9,7 @@ export class Film extends Phaser.Scene {
     }
 
     preload() {
-        this.load.video('endVideo', '../assets/video/test.mp4');
+        this.load.video('endVideo', 'assets/video/test.mp4');
         this.reloadButton.preload();
         this.homeButton.preload();
     }
